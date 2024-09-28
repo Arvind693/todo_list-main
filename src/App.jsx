@@ -3,6 +3,7 @@ import Form from './components/Form';
 import Header from './components/Header';
 import { useEffect, useState } from 'react';
 import TodosList from "./components/TodosList";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 function App() {
 
   const initialState=JSON.parse(localStorage.getItem("todos")) || [];
