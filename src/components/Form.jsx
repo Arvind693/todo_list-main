@@ -34,7 +34,7 @@ const Form = ({input,setInput,todos,setTodos, editTodo, setEditTodo}) => {
   }
   return (
     
-    <form onSubmit={onFormSubmit}>
+    <form onSubmit={onFormSubmit} className='input-and-btn'>
         <input 
           type="text" 
           placeholder='Enter Your Task' 

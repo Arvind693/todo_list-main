@@ -1,88 +1,116 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.container{
+
+.container {
     background: linear-gradient(to right bottom, #e1b382, #66b4c8);
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}    
-.app-wrapper{
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #12343b;
-    min-width: 450px;
+    width: 40%;
     min-height: 550px;
     padding: 30px;
     box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 3px 6px 40px #000;
 }
-.header h1{
-    font-size: 30px;
+
+.header h1 {
+    font-size: 1.5rem;
     color: #fff;
     text-align: center;
     margin-bottom: 20px;
 }
-.task-input{
+.input-and-btn{
+    width: 100%;
+    display: flex;
+}
+.task-input {
     outline: none;
-    width: 260px;
-    padding: 15px;
+    width: 100%;
+    padding: 10px;
     margin-right: 25px;
-    font-size: 20px;
+    font-size: 1rem;
     color: #ccc;
     background-color: #000000;
     border: 1px solid #c89666;
     border-radius: 10px;
 }
-.button-add{
+
+.button-add {
     width: 70px;
-    padding: 15px 15px;
-    font-size: 20px;
+    padding:10px;
+    font-size: 18px;
     font-weight: 600;
     border-radius: 10px;
     border: 0;
     background-color: #f1af71;
     cursor: pointer;
 }
-.button-add:hover{
+
+.button-add:hover {
     background-color: #6e4c2c;
 }
-.list-item{
+
+.list-item {
     display: flex;
-    margin: 20px 0;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
     max-height: 30px;
 }
-.button-complete, .button-delete, .button-edit{
+.list-item input{
+    width: 100%;
+    font-size: 15px;
+}
+
+.button-complete,
+.button-delete,
+.button-edit {
     border: none;
     outline: none;
     cursor: pointer;
     background-color: transparent;
-    font-size: 28px;
+    font-size: 16px;
     border-radius: 50%;
 }
-.button-complete{
+.btn-list{
+    display: flex;
+}
+
+.button-complete {
     color: #ff6c6c;
     margin-right: 10px;
 }
-.button-edit{
+
+.button-edit {
     color: #e2d029;
     margin-right: 10px;
 }
-.button-delete{
+
+.button-delete {
     color: lightseagreen;
 }
-.complete{
+
+.complete {
     text-decoration-style: solid;
     text-decoration-line: line-through;
     text-decoration-color: #ff6c6c;
     opacity: 0.6;
 }
-.list{
+
+.list {
     width: 220px;
     background-color: #12343b;
     border: none;
@@ -91,6 +119,55 @@
     padding-left: 10px;
     margin-right: 10px;
 }
-input:focus, button:focus{
+
+input:focus,
+button:focus {
     outline: none;
 }
+
+@media (max-width:600px) {
+    .app-wrapper {
+        width: 90%;
+        min-height: 400px;
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 1rem;
+    }
+    .task-input {
+        padding: 5px;
+        font-size: 1rem;
+    }
+    
+    .button-add {
+        width: 50%;
+        padding:10px;
+        font-size: 1rem;
+    }
+    
+    
+    .list-item {
+        display: flex;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        max-height: 30px;
+    }
+    .list-item input{
+        width: 100%;
+        font-size: 15px;
+    }
+    
+    .list {
+        width: 220px;
+        background-color: #12343b;
+        border: none;
+        color: #ccc;
+        font-size: 15px;
+        padding-left: 10px;
+        margin-right: 10px;
+    }
+    
+}    
